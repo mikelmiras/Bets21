@@ -19,6 +19,7 @@ import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Event;
 import domain.Question;
+import domain.User;
 import exceptions.QuestionAlreadyExist;
 
 /**
@@ -181,7 +182,16 @@ public class DataAccess  {
 			return q;
 		
 	}
-	
+	/**
+	 * This method tells if a login is valid or not.
+	 * @return boolean True if login is valid, false otherwise.
+	 */
+	public boolean isLogin(User u) {
+		System.out.println(">> DataAccess: isLogin=> username=" + u.getUsername() + "password=" + u.getPassword());
+		User user = db.find(User.class, u);
+		if (user == null) return false;
+		return true;
+	}
 	/**
 	 * This method retrieves from the database the events of a given date 
 	 * 

@@ -10,6 +10,7 @@ import javax.jws.WebService;
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Question;
+import domain.User;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -125,6 +126,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.initializeDB();
 		dbManager.close();
 	}
-
+    
+    @WebMethod
+    public boolean isLogin(User user) {
+    	dbManager.open(false);
+    	boolean emaitza = isLogin(user);
+    	dbManager.close();
+    	return emaitza;
+    }
 }
 

@@ -9,6 +9,7 @@ import java.util.Date;
 
 //import domain.Booking;
 import domain.Question;
+import domain.User;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -35,6 +36,11 @@ public interface BLFacade  {
 	 */
 	@WebMethod Question createQuestion(Event event, String question, float betMinimum) throws EventFinished, QuestionAlreadyExist;
 	
+	/**
+	 * 
+	 * @return
+	 */
+	@WebMethod public boolean isLogin(User u);
 	
 	/**
 	 * This method retrieves the events of a given date 

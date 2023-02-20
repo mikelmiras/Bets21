@@ -113,7 +113,8 @@ public class MainGUI extends JFrame {
 			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					JFrame a = new CreateQuestionGUI(new Vector<Event>());
+					//JFrame a = new CreateQuestionGUI(new Vector<Event>());
+					JFrame a = new LoginGUI();
 					a.setVisible(true);
 				}
 			});

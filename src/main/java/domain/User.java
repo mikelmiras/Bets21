@@ -13,18 +13,24 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class User {
 	
 	@Id
-	@GeneratedValue
-	private int userid;
 	private String username;
 	private String password;
+	boolean isAdmin;
 	
-	public User(String username, String password) {
+	public User(String username, String password, boolean admin) {
 		this.username = username;
 		this.password = password;
+		this.isAdmin = admin;
+	}
+	public User (String username, String password) {
+		this (username, password, false);
 	}
 	public void hashPassword() {
 		char[] hashedPass = BCrypt.with(BCrypt.Version.VERSION_2Y).hashToChar(6, password.toCharArray());
-		this.password = hashedPass.toString();
+		this.password = "";
+		for (char c : hashedPass) {
+			this.password += c;
+		}
 	}
 	public String getUsername() {
 		return username;
@@ -32,8 +38,11 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
+	@Override
 	public boolean equals(Object obj) {
 		User us = (User)obj;
+		boolean result = BCrypt.verifyer().verify(us.getPassword().toCharArray(), this.password.toCharArray()).verified && us.getUsername().equals(this.getUsername());
+		System.out.println("Equals result: " + result);
 		return BCrypt.verifyer().verify(us.getPassword().toCharArray(), this.password.toCharArray()).verified && us.getUsername().equals(this.getUsername());
 	}
 }

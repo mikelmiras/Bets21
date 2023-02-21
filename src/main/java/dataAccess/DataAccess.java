@@ -92,6 +92,10 @@ public class DataAccess  {
 			Question q4;
 			Question q5;
 			Question q6;
+			
+			User us = new User("mikel", "mikel");
+			us.hashPassword();
+			db.persist(us);
 					
 			if (Locale.getDefault().equals(new Locale("es"))) {
 				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
@@ -188,9 +192,9 @@ public class DataAccess  {
 	 */
 	public boolean isLogin(User u) {
 		System.out.println(">> DataAccess: isLogin=> username=" + u.getUsername() + "password=" + u.getPassword());
-		User user = db.find(User.class, u);
+		User user = db.find(User.class, u.getUsername());
 		if (user == null) return false;
-		return true;
+		return user.equals(u);
 	}
 	/**
 	 * This method retrieves from the database the events of a given date 

@@ -130,7 +130,7 @@ public class BLFacadeImplementation  implements BLFacade {
     @WebMethod
     public boolean isLogin(User user) {
     	dbManager.open(false);
-    	boolean emaitza = isLogin(user);
+    	boolean emaitza = dbManager.isLogin(user);
     	dbManager.close();
     	return emaitza;
     }

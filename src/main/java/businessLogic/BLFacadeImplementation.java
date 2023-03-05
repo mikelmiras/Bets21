@@ -12,6 +12,7 @@ import dataAccess.DataAccess;
 import domain.Question;
 import domain.User;
 import domain.Event;
+import domain.LoginResult;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -128,11 +129,23 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
     
     @WebMethod
-    public boolean isLogin(User user) {
+    public LoginResult isLogin(User user) {
     	dbManager.open(false);
-    	boolean emaitza = dbManager.isLogin(user);
+    	LoginResult result = new LoginResult(false);
+    	result = dbManager.isLogin(user, result);
+    	if (!result.isValid()) {
+    		result.setErr(ResourceBundle.getBundle("Etiquetas").getString("UserNotFound"));
+    	}else {
+    		boolean validpass = result.getFoundUser().equals(user);
+    		result.setValid(validpass);
+    		if (validpass) {
+    			result.setErr(ResourceBundle.getBundle("Etiquetas").getString("ValidLogin"));
+    		}else {
+    			result.setErr(ResourceBundle.getBundle("Etiquetas").getString("InvalidPass"));
+    		}
+    	}
     	dbManager.close();
-    	return emaitza;
+    	return result;
     }
 }
 

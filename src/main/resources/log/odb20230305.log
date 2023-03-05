@@ -1,0 +1,348 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 13:45:23 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 10052@DESKTOP-E0J983N
+
+[2023-03-05 13:45:23 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 13:45:23 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 13:45:23 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 13:45:23 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 13:45:23 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 13:45:23 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 13:45:23 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 13:45:23 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 13:48:15 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 13332@DESKTOP-E0J983N
+
+[2023-03-05 13:48:15 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 13:48:15 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 13:48:15 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 13:48:15 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 13:48:15 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 13:48:15 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 13:48:15 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 13:48:15 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 13:48:51 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 9020@DESKTOP-E0J983N
+
+[2023-03-05 13:48:51 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 13:48:51 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 13:48:51 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 13:48:51 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 13:48:51 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 13:48:51 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 13:48:51 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 13:48:51 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:13:40 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 10156@DESKTOP-E0J983N
+
+[2023-03-05 14:13:40 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:13:40 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:13:40 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:13:40 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:13:40 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:13:40 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:13:40 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:13:40 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:14:07 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 9220@DESKTOP-E0J983N
+
+[2023-03-05 14:14:07 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:14:07 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:14:07 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:14:07 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:14:07 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:14:07 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:14:07 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:14:07 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:16:14 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 3372@DESKTOP-E0J983N
+
+[2023-03-05 14:16:15 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:16:15 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:16:15 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:16:15 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:16:15 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:16:15 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:16:15 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:16:15 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:16:45 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 14088@DESKTOP-E0J983N
+
+[2023-03-05 14:16:45 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:16:45 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:16:45 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:16:45 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:16:45 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:16:45 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:16:45 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:16:45 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:17:58 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 8728@DESKTOP-E0J983N
+
+[2023-03-05 14:17:58 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:17:58 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:17:58 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:17:58 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:17:58 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:17:58 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:17:58 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:17:58 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:20:20 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 14972@DESKTOP-E0J983N
+
+[2023-03-05 14:20:20 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:20:20 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:20:20 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:20:20 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:20:20 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:20:20 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:20:20 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:20:20 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:21:29 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 3876@DESKTOP-E0J983N
+
+[2023-03-05 14:21:29 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:21:29 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:21:29 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:21:29 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:21:29 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:21:29 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:21:29 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:21:29 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:22:39 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 10104@DESKTOP-E0J983N
+
+[2023-03-05 14:22:39 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:22:39 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:22:39 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:22:39 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:22:39 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:22:39 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:22:39 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:22:39 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-05 14:23:04 #1 store] 
+Database 'C:\Users\Mikel\git\Bets21\src\main\resources\bets.temp' is opened by 1480@DESKTOP-E0J983N
+
+[2023-03-05 14:23:04 #2 type.registry] 
+New type domain.User
+
+[2023-03-05 14:23:04 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-05 14:23:04 #4 type.registry] 
+New type domain.Question
+
+[2023-03-05 14:23:04 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-05 14:23:04 #6 type.registry] 
+New type domain.Event
+
+[2023-03-05 14:23:04 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-05 14:23:04 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-05 14:23:04 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

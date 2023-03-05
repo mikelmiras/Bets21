@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
+import domain.LoginResult;
 import domain.User;
 
 import javax.swing.JPasswordField;
@@ -88,11 +89,13 @@ public class LoginGUI extends JFrame {
 				String password = passwordField.getText();
 				User loginUser = new User(username, password);
 				BLFacade facade = MainGUI.getBusinessLogic();
-				
-				if (facade.isLogin(loginUser)) {
-					errlabl.setText("Login ok");
+				LoginResult result = facade.isLogin(loginUser);
+				if (result.isValid()) {
+					errlabl.setText(result.getErrmsg());
+					errlabl.setForeground(new Color(0, 255, 0));
 				}else {
-					errlabl.setText("Login NOT OK");
+					errlabl.setText(result.getErrmsg());
+					errlabl.setForeground(new Color(255, 0, 0));
 				}
 				return;
 				

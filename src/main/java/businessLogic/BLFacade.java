@@ -11,6 +11,7 @@ import java.util.Date;
 import domain.Question;
 import domain.User;
 import domain.Event;
+import domain.LoginResult;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -40,7 +41,7 @@ public interface BLFacade  {
 	 * 
 	 * @return
 	 */
-	@WebMethod public boolean isLogin(User u);
+	@WebMethod public LoginResult isLogin(User u);
 	
 	/**
 	 * This method retrieves the events of a given date 

@@ -30,7 +30,8 @@ public class MainGUI extends JFrame {
 	private JPanel jContentPane = null;
 	private JButton jButtonCreateQuery = null;
 	private JButton jButtonQueryQueries = null;
-
+	private JButton jButtonRegister = null;
+	
     private static BLFacade appFacadeInterface;
 	
 	public static BLFacade getBusinessLogic(){
@@ -92,10 +93,11 @@ public class MainGUI extends JFrame {
 	private JPanel getJContentPane() {
 		if (jContentPane == null) {
 			jContentPane = new JPanel();
-			jContentPane.setLayout(new GridLayout(4, 1, 0, 0));
+			jContentPane.setLayout(new GridLayout(5, 1, 0, 0));
 			jContentPane.add(getLblNewLabel());
 			jContentPane.add(getBoton3());
 			jContentPane.add(getBoton2());
+			jContentPane.add(registerbtn());
 			jContentPane.add(getPanel());
 		}
 		return jContentPane;
@@ -121,7 +123,25 @@ public class MainGUI extends JFrame {
 		}
 		return jButtonCreateQuery;
 	}
-	
+	/**
+	 * This method initializes register btn
+	 * 
+	 * @return javax.swing.JButton
+	 */
+	private JButton registerbtn() {
+		if (jButtonRegister == null) {
+			jButtonRegister = new JButton();
+			jButtonRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("RegisterBTN"));
+			jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					//JFrame a = new CreateQuestionGUI(new Vector<Event>());
+					JFrame a = new RegisterGUI();
+					a.setVisible(true);
+				}
+			});
+		}
+		return jButtonRegister;
+	}
 	/**
 	 * This method initializes boton2
 	 * 
@@ -206,6 +226,7 @@ public class MainGUI extends JFrame {
 		jLabelSelectOption.setText(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
 		jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 		jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("LoginBtn"));
+		jButtonRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("RegisterBTN"));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
 	

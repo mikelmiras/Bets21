@@ -147,5 +147,19 @@ public class BLFacadeImplementation  implements BLFacade {
     	dbManager.close();
     	return result;
     }
+    @WebMethod
+    public LoginResult register(User u) {
+    	LoginResult result = new LoginResult(false);
+    	dbManager.open(false);
+    	boolean result_b = dbManager.register(u);
+    	if (result_b) {
+    		result.setValid(true);
+    		result.setErr("Kontua ondo sortu da.");
+    	}else {
+    		result.setValid(false);
+    		result.setErr("Kontua existitzen da.");
+    	}
+    	return result;
+    }
 }
 

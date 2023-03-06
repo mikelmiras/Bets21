@@ -5,21 +5,29 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.LoginResult;
+import domain.User;
+
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.BoxLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class RegisterGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField usnameinput;
+	private JPasswordField passinput;
 
 	/**
 	 * Launch the application.
@@ -41,7 +49,7 @@ public class RegisterGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public RegisterGUI() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,23 +61,44 @@ public class RegisterGUI extends JFrame {
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.LEFT);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		usnameinput = new JTextField();
+		usnameinput.setHorizontalAlignment(SwingConstants.LEFT);
+		contentPane.add(usnameinput);
+		usnameinput.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
 		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_1);
 		
-		passwordField = new JPasswordField();
-		contentPane.add(passwordField);
+		passinput = new JPasswordField();
+		contentPane.add(passinput);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Create account");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(btnNewButton);
 		
-		JLabel label = new JLabel("");
-		contentPane.add(label);
+		JLabel statuslabl = new JLabel("");
+		contentPane.add(statuslabl);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BLFacade facade = MainGUI.getBusinessLogic();
+				String usname = usnameinput.getText();
+				String pass = "";
+				for (char c: passinput.getPassword()) {
+					pass += c;
+				}
+				User newuser = new User(usname, pass);
+				newuser.hashPassword();
+				LoginResult l = facade.register(newuser);
+				if (l.isValid()) {
+					statuslabl.setForeground(new Color(0, 255, 0));
+					statuslabl.setText("Kontua ondo sortu da.");
+				}else {
+					statuslabl.setForeground(new Color(255, 0, 0));
+					statuslabl.setText("Jarritako erabiltzailea existitzen da edo ez da baliozkoa");
+				}
+			}
+		});
 	}
 
 }

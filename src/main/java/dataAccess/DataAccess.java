@@ -94,7 +94,7 @@ public class DataAccess  {
 			Question q5;
 			Question q6;
 			
-			User us = new User("mikel", "mikel");
+			User us = new User("mikel", "mikel", true);
 			us.hashPassword();
 			db.persist(us);
 					
@@ -198,6 +198,20 @@ public class DataAccess  {
 		r.setValid(!(user==null));
 		return r;
 	}
+	
+	/**
+	 * 
+	 */
+	public boolean register(User u) {
+		System.out.println(">> DataAccess: register=> username=" + u.getUsername() + "password=" + u.getPassword());
+		User user = db.find(User.class, u.getUsername());
+		if (user!=null) return false;
+		db.getTransaction().begin();
+		db.persist(u);
+		db.getTransaction().commit();
+		return true;
+	}
+	
 	/**
 	 * This method retrieves from the database the events of a given date 
 	 * 

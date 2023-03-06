@@ -38,10 +38,16 @@ public interface BLFacade  {
 	@WebMethod Question createQuestion(Event event, String question, float betMinimum) throws EventFinished, QuestionAlreadyExist;
 	
 	/**
-	 * 
-	 * @return
+	 * This method is for login in.
+	 * @return LoginResult Contains login status.
 	 */
 	@WebMethod public LoginResult isLogin(User u);
+	/**
+	 * This method is for registering new users.
+	 * @return LoginResult Contains register status.
+	 */
+	@WebMethod public LoginResult register(User u);
+	
 	
 	/**
 	 * This method retrieves the events of a given date 

@@ -281,6 +281,18 @@ public void open(boolean initializeMode){
     	   }
 		
 	}
+
+public boolean createEvent(Event e) {
+	System.out.println(">> DataAccess: createEvent=>" + e.toString());
+	Event exists = db.find(Event.class, e);
+	if (exists != null) return false;
+	
+	db.getTransaction().begin();
+	db.persist(e);
+	db.getTransaction().commit();
+	return true;
+}
+
 public boolean existQuestion(Event event, String question) {
 	System.out.println(">> DataAccess: existQuestion=> event= "+event+" question= "+question);
 	Event ev = db.find(Event.class, event.getEventNumber());

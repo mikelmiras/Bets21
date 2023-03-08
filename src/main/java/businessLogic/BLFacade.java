@@ -71,5 +71,6 @@ public interface BLFacade  {
 	 */	
 	@WebMethod public void initializeBD();
 
+	@WebMethod public boolean createEvent(Event e);
 	
 }

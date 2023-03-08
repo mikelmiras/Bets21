@@ -161,5 +161,15 @@ public class BLFacadeImplementation  implements BLFacade {
     	}
     	return result;
     }
+    
+    
+    @WebMethod
+    public boolean createEvent(Event e) {
+    	if (e.getEventDate().before(new Date())) {
+    		return false;
+    	}
+    	dbManager.open(false);
+    	return dbManager.createEvent(e);
+    }
 }
 

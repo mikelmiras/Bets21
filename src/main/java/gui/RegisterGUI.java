@@ -21,6 +21,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 
 public class RegisterGUI extends JFrame {
@@ -57,23 +58,23 @@ public class RegisterGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(6, 1, 5, 5));
 		
-		JLabel lblNewLabel = new JLabel("Username");
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LoginUsername"));
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(lblNewLabel);
 		
-		usnameinput = new JTextField();
+		usnameinput = new JTextField("");
 		usnameinput.setHorizontalAlignment(SwingConstants.LEFT);
 		contentPane.add(usnameinput);
 		usnameinput.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
+		JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LoginPasword"));
 		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_1);
 		
 		passinput = new JPasswordField();
 		contentPane.add(passinput);
 		
-		JButton btnNewButton = new JButton("Create account");
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("RegisterBTN"));
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 18));
 		contentPane.add(btnNewButton);
 		
@@ -86,6 +87,11 @@ public class RegisterGUI extends JFrame {
 				String pass = "";
 				for (char c: passinput.getPassword()) {
 					pass += c;
+				}
+				if (usname.equals("") || pass.equals("")) {
+					statuslabl.setForeground(new Color(255, 0, 0));
+					statuslabl.setText("Jarritako erabiltzailea existitzen da edo ez da baliozkoa");
+					return;
 				}
 				User newuser = new User(usname, pass);
 				newuser.hashPassword();

@@ -99,7 +99,9 @@ public class RegisterGUI extends JFrame {
 				if (l.isValid()) {
 					statuslabl.setForeground(new Color(0, 255, 0));
 					statuslabl.setText(l.getErrmsg());
-					// Zabaldu CreateQuote
+					JFrame a = new UserGUI(newuser);
+					a.setVisible(true);
+					dispose();
 				}else {
 					statuslabl.setForeground(new Color(255, 0, 0));
 					statuslabl.setText(l.getErrmsg());

@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import domain.User;
+
 import java.awt.GridLayout;
 import java.util.ResourceBundle;
 
@@ -14,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
-public class AdminGUI extends JFrame {
+public class UserGUI extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +26,7 @@ public class AdminGUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminGUI frame = new AdminGUI(new User("demo", ""));
+					UserGUI frame = new UserGUI(new User("demo", ""));
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,30 +38,21 @@ public class AdminGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdminGUI(User u) {
+	public UserGUI(User u) {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		contentPane.setLayout(new GridLayout(6, 1, 0, 6));
+		contentPane.setLayout(new GridLayout(6, 0, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel(u.getUsername());
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
-		contentPane.add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateQuestion"));
-		contentPane.add(btnNewButton_2);
-		
-		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateQuote"));
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("QueryQuestion"));
 		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_3 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateEvent"));
-		contentPane.add(btnNewButton_3);
 	}
 
 }

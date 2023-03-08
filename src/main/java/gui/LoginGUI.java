@@ -98,9 +98,9 @@ public class LoginGUI extends JFrame {
 						JFrame a = new AdminGUI(result.getFoundUser());
 						a.setVisible(true);
 					}else {
-						
+						JFrame a = new UserGUI(result.getFoundUser());
+						a.setVisible(true);
 					}
-					
 					dispose();
 					
 				}else {

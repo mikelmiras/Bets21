@@ -346,3 +346,136 @@ New type java.util.Vector<domain.Question>
 [2023-03-08 21:24:37 #9 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 21:34:16 #1 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 5548@DESKTOP-E0J983N
+
+[2023-03-08 21:34:16 #2 type.registry] 
+New type domain.User
+
+[2023-03-08 21:34:16 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 21:34:16 #4 type.registry] 
+New type domain.Question
+
+[2023-03-08 21:34:16 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 21:34:16 #6 type.registry] 
+New type domain.Event
+
+[2023-03-08 21:34:16 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-08 21:34:16 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-08 21:34:16 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 21:39:40 #1 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 10144@DESKTOP-E0J983N
+
+[2023-03-08 21:39:40 #2 type.registry] 
+New type domain.User
+
+[2023-03-08 21:39:40 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 21:39:40 #4 type.registry] 
+New type domain.Question
+
+[2023-03-08 21:39:40 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 21:39:40 #6 type.registry] 
+New type domain.Event
+
+[2023-03-08 21:39:40 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-08 21:39:40 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-08 21:39:40 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 21:41:13 #1 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 14296@DESKTOP-E0J983N
+
+[2023-03-08 21:41:13 #2 type.registry] 
+New type domain.User
+
+[2023-03-08 21:41:13 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 21:41:13 #4 type.registry] 
+New type domain.Question
+
+[2023-03-08 21:41:13 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 21:41:13 #6 type.registry] 
+New type domain.Event
+
+[2023-03-08 21:41:13 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-08 21:41:13 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-08 21:41:13 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 21:41:43 #1 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 19160@DESKTOP-E0J983N
+
+[2023-03-08 21:41:43 #2 type.registry] 
+New type domain.User
+
+[2023-03-08 21:41:43 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 21:41:43 #4 type.registry] 
+New type domain.Question
+
+[2023-03-08 21:41:43 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 21:41:43 #6 type.registry] 
+New type domain.Event
+
+[2023-03-08 21:41:43 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-08 21:41:43 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-08 21:41:43 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 21:42:21 #1 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' has been recovered (tr. 1-7)
+
+[2023-03-08 21:42:21 #2 store] 
+Database 'C:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 18556@DESKTOP-E0J983N
+
+[2023-03-08 21:42:21 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 21:42:21 #4 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 21:42:21 #5 type] 
+Type domain.Event is not enhanced.
+

@@ -38,6 +38,9 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
+	public boolean isAdmin() {
+		return this.isAdmin;
+	}
 	@Override
 	public boolean equals(Object obj) {
 		User us = (User)obj;

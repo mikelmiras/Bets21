@@ -16,6 +16,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
@@ -93,6 +94,15 @@ public class LoginGUI extends JFrame {
 				if (result.isValid()) {
 					errlabl.setText(result.getErrmsg());
 					errlabl.setForeground(new Color(0, 255, 0));
+					if (result.getFoundUser().isAdmin()) {
+						JFrame a = new AdminGUI(result.getFoundUser());
+						a.setVisible(true);
+					}else {
+						
+					}
+					
+					dispose();
+					
 				}else {
 					errlabl.setText(result.getErrmsg());
 					errlabl.setForeground(new Color(255, 0, 0));

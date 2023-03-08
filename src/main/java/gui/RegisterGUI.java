@@ -98,11 +98,11 @@ public class RegisterGUI extends JFrame {
 				LoginResult l = facade.register(newuser);
 				if (l.isValid()) {
 					statuslabl.setForeground(new Color(0, 255, 0));
-					statuslabl.setText("Kontua ondo sortu da.");
+					statuslabl.setText(l.getErrmsg());
 					// Zabaldu CreateQuote
 				}else {
 					statuslabl.setForeground(new Color(255, 0, 0));
-					statuslabl.setText("Jarritako erabiltzailea existitzen da edo ez da baliozkoa");
+					statuslabl.setText(l.getErrmsg());
 				}
 			}
 		});

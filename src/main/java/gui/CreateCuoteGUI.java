@@ -27,11 +27,9 @@ public class CreateCuoteGUI extends JFrame {
 	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("ListEvents"));
 	private JLabel jLabelQuery = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Query"));
 	private JLabel jLabelMinBet = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MinimumBetPrice"));
-	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
 
 	private JTextField jTextFieldQuery = new JTextField();
 	private JTextField jTextFieldPrice = new JTextField();
-	private JCalendar jCalendar = new JCalendar();
 	private Calendar calendarAct = null;
 	private Calendar calendarAnt = null;
 
@@ -59,14 +57,12 @@ public class CreateCuoteGUI extends JFrame {
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 
 		jComboBoxEvents.setModel(modelEvents);
-		jComboBoxEvents.setBounds(new Rectangle(275, 47, 250, 20));
-		jLabelListOfEvents.setBounds(new Rectangle(290, 18, 277, 20));
+		jComboBoxEvents.setBounds(new Rectangle(40, 47, 485, 20));
+		jLabelListOfEvents.setBounds(new Rectangle(40, 23, 277, 20));
 		jLabelQuery.setBounds(new Rectangle(25, 211, 75, 20));
 		jTextFieldQuery.setBounds(new Rectangle(100, 211, 429, 20));
 		jLabelMinBet.setBounds(new Rectangle(25, 243, 75, 20));
 		jTextFieldPrice.setBounds(new Rectangle(100, 243, 60, 20));
-
-		jCalendar.setBounds(new Rectangle(40, 50, 225, 150));
 		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));
 
 		jButtonCreate.setBounds(new Rectangle(100, 275, 130, 30));
@@ -102,149 +98,39 @@ public class CreateCuoteGUI extends JFrame {
 
 		this.getContentPane().add(jLabelMinBet, null);
 		this.getContentPane().add(jLabelListOfEvents, null);
-		this.getContentPane().add(jComboBoxEvents, null);
-
-		this.getContentPane().add(jCalendar, null);
-		
-		
 		BLFacade facade = MainGUI.getBusinessLogic();
-		datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());
-		paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);
-		
-		
-
-		jLabelEventDate.setBounds(new Rectangle(40, 15, 140, 25));
-		jLabelEventDate.setBounds(40, 16, 140, 25);
-		getContentPane().add(jLabelEventDate);
-		
+		Vector<Event> events = facade.getEvents(new Date());
 		JComboBox<Event> jComboBoxEvents_1 = new JComboBox<Event>();
+		DefaultComboBoxModel<Event> model = new DefaultComboBoxModel<Event>();
+		model.addAll(events);
+		jComboBoxEvents.setModel(model);
+		this.getContentPane().add(jComboBoxEvents, null);
+		
+		
+		
 		jComboBoxEvents_1.setBounds(new Rectangle(275, 47, 250, 20));
-		jComboBoxEvents_1.setBounds(275, 98, 250, 20);
+		jComboBoxEvents_1.setBounds(40, 98, 485, 20);
+		
+		
+		
+		jComboBoxEvents.addActionListener (new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Item selected on list");  										 
+				Event selected = (Event) jComboBoxEvents.getSelectedItem();
+				
+				int eventid = selected.getEventNumber();
+			}
+		});		
+
 		getContentPane().add(jComboBoxEvents_1);
 		
 		JLabel lblListOfQuestions = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateCuoteGUI.lblListOfQuestions.text")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblListOfQuestions.setBounds(new Rectangle(290, 18, 277, 20));
-		lblListOfQuestions.setBounds(290, 78, 277, 20);
+		lblListOfQuestions.setBounds(40, 78, 277, 20);
 		getContentPane().add(lblListOfQuestions);
-
-		
-		// Code for JCalendar
-		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
-			public void propertyChange(PropertyChangeEvent propertychangeevent) {
-//				this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
-//					public void propertyChange(PropertyChangeEvent propertychangeevent) {
-				if (propertychangeevent.getPropertyName().equals("locale")) {
-					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());
-				} else if (propertychangeevent.getPropertyName().equals("calendar")) {
-					calendarAnt = (Calendar) propertychangeevent.getOldValue();
-					calendarAct = (Calendar) propertychangeevent.getNewValue();
-					System.out.println("calendarAnt: "+calendarAnt.getTime());
-					System.out.println("calendarAct: "+calendarAct.getTime());
-					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());
-					
-					int monthAnt = calendarAnt.get(Calendar.MONTH);
-					int monthAct = calendarAct.get(Calendar.MONTH);
-					if (monthAct!=monthAnt) {
-						if (monthAct==monthAnt+2) { 
-							// Si en JCalendar está 30 de enero y se avanza al mes siguiente, devolverá 2 de marzo (se toma como equivalente a 30 de febrero)
-							// Con este código se dejará como 1 de febrero en el JCalendar
-							calendarAct.set(Calendar.MONTH, monthAnt+1);
-							calendarAct.set(Calendar.DAY_OF_MONTH, 1);
-						}
-						
-						jCalendar.setCalendar(calendarAct);
-						
-						BLFacade facade = MainGUI.getBusinessLogic();
-
-						datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());
-					}
-
-
-
-					paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);
-
-					//	Date firstDay = UtilDate.trim(new Date(jCalendar.getCalendar().getTime().getTime()));
-					Date firstDay = UtilDate.trim(calendarAct.getTime());
-
-					try {
-						BLFacade facade = MainGUI.getBusinessLogic();
-
-						Vector<domain.Event> events = facade.getEvents(firstDay);
-
-						if (events.isEmpty())
-							jLabelListOfEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("NoEvents")
-									+ ": " + dateformat1.format(calendarAct.getTime()));
-						else
-							jLabelListOfEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("Events") + ": "
-									+ dateformat1.format(calendarAct.getTime()));
-						jComboBoxEvents.removeAllItems();
-						System.out.println("Events " + events);
-
-						for (domain.Event ev : events)
-							modelEvents.addElement(ev);
-						jComboBoxEvents.repaint();
-
-						if (events.size() == 0)
-							jButtonCreate.setEnabled(false);
-						else
-							jButtonCreate.setEnabled(true);
-
-					} catch (Exception e1) {
-
-						jLabelError.setText(e1.getMessage());
-					}
-
-				}
-			}
-		});
 	}
 
 	
-public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWithEventsCurrentMonth) {
-		// For each day with events in current month, the background color for that day is changed to cyan.
-
-		
-		Calendar calendar = jCalendar.getCalendar();
-		
-		int month = calendar.get(Calendar.MONTH);
-		int today=calendar.get(Calendar.DAY_OF_MONTH);
-		int year=calendar.get(Calendar.YEAR);
-		
-		calendar.set(Calendar.DAY_OF_MONTH, 1);
-		int offset = calendar.get(Calendar.DAY_OF_WEEK);
-
-		if (Locale.getDefault().equals(new Locale("es")))
-			offset += 4;
-		else
-			offset += 5;
-		
-		
-	 	for (Date d:datesWithEventsCurrentMonth){
-
-	 		calendar.setTime(d);
-	 		System.out.println(d);
-	 		
-
-			
-			// Obtain the component of the day in the panel of the DayChooser of the
-			// JCalendar.
-			// The component is located after the decorator buttons of "Sun", "Mon",... or
-			// "Lun", "Mar"...,
-			// the empty days before day 1 of month, and all the days previous to each day.
-			// That number of components is calculated with "offset" and is different in
-			// English and Spanish
-//			    		  Component o=(Component) jCalendar.getDayChooser().getDayPanel().getComponent(i+offset);; 
-			Component o = (Component) jCalendar.getDayChooser().getDayPanel()
-					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);
-			o.setBackground(Color.CYAN);
-	 	}
-	 	
- 			calendar.set(Calendar.DAY_OF_MONTH, today);
-	 		calendar.set(Calendar.MONTH, month);
-	 		calendar.set(Calendar.YEAR, year);
-
-	 	
-	}
 	
 	 
 	private void jButtonCreate_actionPerformed(ActionEvent e) {

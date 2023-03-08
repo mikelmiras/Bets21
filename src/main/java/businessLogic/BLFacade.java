@@ -73,4 +73,5 @@ public interface BLFacade  {
 
 	@WebMethod public boolean createEvent(Event e);
 	
+	@WebMethod public Vector<Question> getEventQuestions(Event e);
 }

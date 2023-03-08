@@ -221,10 +221,11 @@ public class DataAccess  {
 	public Vector<Event> getEvents(Date date) {
 		System.out.println(">> DataAccess: getEvents");
 		Vector<Event> res = new Vector<Event>();	
-		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate=?1",Event.class);   
+		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev",Event.class);   
 		query.setParameter(1, date);
 		List<Event> events = query.getResultList();
 	 	 for (Event ev:events){
+	 		 System.out.println("Event found: ");
 	 	   System.out.println(ev.toString());		 
 		   res.add(ev);
 		  }
@@ -256,7 +257,17 @@ public class DataAccess  {
 	 	return res;
 	}
 	
-
+public Vector<Question> getEventsQuestions(int evid){
+	Vector<Question> q = new Vector<Question>();
+	
+	
+	
+	
+	return q;
+	
+}
+	
+	
 public void open(boolean initializeMode){
 		
 		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());

@@ -171,5 +171,16 @@ public class BLFacadeImplementation  implements BLFacade {
     	dbManager.open(false);
     	return dbManager.createEvent(e);
     }
+    
+    
+    @WebMethod 
+    public Vector<Question> getEventQuestions(Event e){
+    	Vector<Question> data = new Vector<Question>();
+    	dbManager.open(false);
+    	
+    	
+    	
+    	return data;
+    }
 }
 

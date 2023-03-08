@@ -12,10 +12,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/main/resources/objectdb.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/objectdb.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/jcalendar-1.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -31,7 +32,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Mikel/Downloads/bcrypt-0.10.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
+	<classpathentry kind="lib" path="src/main/resources/bcrypt-0.10.2-javadoc.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

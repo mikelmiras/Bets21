@@ -1,0 +1,29 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2023-03-08 19:41:05 #1 store] 
+Database 'D:\Users\Mikel\Documents\Bets21\src\main\resources\bets.temp' is opened by 11856@DESKTOP-D9TVLGJ
+
+[2023-03-08 19:41:05 #2 type.registry] 
+New type domain.User
+
+[2023-03-08 19:41:05 #3 type] 
+Type domain.User is not enhanced.
+
+[2023-03-08 19:41:05 #4 type.registry] 
+New type domain.Question
+
+[2023-03-08 19:41:05 #5 type] 
+Type domain.Question is not enhanced.
+
+[2023-03-08 19:41:05 #6 type.registry] 
+New type domain.Event
+
+[2023-03-08 19:41:05 #7 type] 
+Type domain.Event is not enhanced.
+
+[2023-03-08 19:41:05 #8 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2023-03-08 19:41:05 #9 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

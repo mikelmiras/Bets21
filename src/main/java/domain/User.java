@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.ArrayList;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,11 +18,14 @@ public class User {
 	private String username;
 	private String password;
 	boolean isAdmin;
-	
+	double money;
+	ArrayList<String> movementsArray;
 	public User(String username, String password, boolean admin) {
 		this.username = username;
 		this.password = password;
 		this.isAdmin = admin;
+		this.money = 0;
+		movementsArray = new ArrayList<String>();
 	}
 	public User (String username, String password) {
 		this (username, password, false);
@@ -40,6 +45,15 @@ public class User {
 	}
 	public boolean isAdmin() {
 		return this.isAdmin;
+	}
+	public double getMoney() {
+		return this.money;
+	}
+	public ArrayList<String> getMovements(){
+		return this.movementsArray;
+	}
+	public void setMoney(double m) {
+		this.money = m;
 	}
 	@Override
 	public boolean equals(Object obj) {

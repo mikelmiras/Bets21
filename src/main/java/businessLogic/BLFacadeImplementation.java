@@ -36,6 +36,17 @@ public class BLFacadeImplementation  implements BLFacade {
 
 		
 	}
+	@WebMethod
+	public void depositMoney(User u, double m) {
+		try {
+			dbManager.open(false);
+			dbManager.depositMoney(u, m);
+		} catch (Exception e){
+			System.out.println("Errore bat egon da dirua sartzerakoan: " + e.toString());
+		} finally {
+			dbManager.close();
+		}
+	}
 	
     public BLFacadeImplementation(DataAccess da)  {
 		

@@ -14,6 +14,8 @@ import java.util.ResourceBundle;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class UserGUI extends JFrame {
 
@@ -51,8 +53,21 @@ public class UserGUI extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		contentPane.add(lblNewLabel);
 		
+		JLabel lblNewLabel_1 = new JLabel("Money: " + u.getMoney() + " €"); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		contentPane.add(lblNewLabel_1);
+		
 		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("QueryQuestion"));
 		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("depositmoney")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DepositMoneyGUI frame = new DepositMoneyGUI(u);
+				frame.setVisible(true);
+			}
+		});
+		contentPane.add(btnNewButton_1);
 	}
 
 }

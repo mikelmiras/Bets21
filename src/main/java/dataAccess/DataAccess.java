@@ -199,6 +199,15 @@ public class DataAccess  {
 		return r;
 	}
 	
+	public void depositMoney(User u, double m) {
+		System.out.println(">> DataAccess: depositMoney=> user=" + u.toString() + "money=" + m);
+		User user = db.find(User.class, u.getUsername());
+		user.setMoney(user.getMoney() + m);
+		db.getTransaction().begin();
+		db.persist(user);
+		db.getTransaction().commit();
+	}
+	
 	/**
 	 * 
 	 */
